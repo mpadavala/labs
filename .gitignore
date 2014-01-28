@@ -18,3 +18,4 @@ MANIFEST.MF
 build.xml
 /.metadata
 /.project
+/target
