@@ -6,8 +6,6 @@ import java.sql.SQLException;
 
 public class DbSingleton {
 
-	//private static String dbURL = "jdbc:derby://localhost:1527/myDB;create=true;user=me;password=mine";
-	
 	private static DbSingleton instance = null;
 	private Connection connection = null;
 	
