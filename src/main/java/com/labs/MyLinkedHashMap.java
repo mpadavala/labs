@@ -1,4 +1,4 @@
-package com.padavala.labs;
+package com.labs;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
