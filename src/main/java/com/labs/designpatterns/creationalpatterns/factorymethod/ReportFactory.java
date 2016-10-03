@@ -1,7 +1,7 @@
 package com.labs.designpatterns.creationalpatterns.factorymethod;
 
 public class ReportFactory {
-
+/*
 	public static Report getReport(ReportType reportType){
 		
 		if(reportType.equals(ReportType.PDF)){
@@ -15,4 +15,25 @@ public class ReportFactory {
 		}
 	}
 	
+*/
+	
+	/**
+	 * Just to show how its implemented using switch
+	 */
+	public static Report getReport(ReportType reportType){
+		
+		switch(reportType){
+			case PDF : {
+				return new PdfReport();
+			}case EXCEL : {
+				return new ExcelReport();
+			}case CSV : {
+				return new CsvReport();
+			}default : {
+				return null;
+			}
+		}
+		
+	}
+
 }
