@@ -1,9 +1,11 @@
-package com.padavala.labs.privatemethodtesting;
+package com.labs.privatemethodtesting;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import org.junit.Test;
+
+import com.padavala.labs.privatemethodtesting.PrivateMethodClass;
 
 public class PrivateMethodClassTest {
 

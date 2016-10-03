@@ -1,4 +1,4 @@
-package com.apple.labs.spring;
+package com.labs.spring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
