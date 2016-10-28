@@ -62,17 +62,14 @@ public class MyLinkedListImpl implements MyLinkedList {
 		return head == null ? Integer.MIN_VALUE : head.getValue();
 	}
 
-	@Override
 	public int getSize() {
 		return size;
 	}
 	
-	@Override
 	public boolean isEmpty(){
 		return size == 0;
 	}
 	
-	@Override
 	public int getNext() {
 		
 		if(current != null){
@@ -83,7 +80,6 @@ public class MyLinkedListImpl implements MyLinkedList {
 		return Integer.MIN_VALUE;
 	}
 
-	@Override
 	public boolean isLast() {
 		return current == null;
 	}
