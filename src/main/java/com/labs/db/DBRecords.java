@@ -41,10 +41,8 @@ public class DBRecords {
 			}
 			
 		}catch (ClassNotFoundException e) {
-			System.out.println("Where is your Oracle JDBC Driver?");
 			e.printStackTrace();
 		}catch (SQLException e) {
-			System.out.println("Connection Failed! Check output console");
 			e.printStackTrace();
 		} finally {
 			try {
@@ -60,7 +58,7 @@ public class DBRecords {
 			}
 		}
 		
-		return "Num Records in UAT MessageDetails :  " + date;
+		return "date :  " + date;
 	}
 
 }

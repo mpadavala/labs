@@ -12,7 +12,6 @@ public class SpellExpressionLabs {
 		labs.helloWorld();
 	}
 		
-		
 	public void helloWorld(){	
 		ExpressionParser expressionParser = new SpelExpressionParser();
 		Expression expression1 = expressionParser.parseExpression("'Hello World!!'");
@@ -21,12 +20,7 @@ public class SpellExpressionLabs {
 		Expression expression2 = expressionParser.parseExpression("'Hello World'.concat('!')");
 		System.out.println((String)expression2.getValue());
 		
-		
 		Expression expression3 = expressionParser.parseExpression("2+3");
 		System.out.println(expression3.getValue());
-		
 	}
-	
-	
-	
 }

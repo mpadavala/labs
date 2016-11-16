@@ -4,13 +4,11 @@ public class RuntimeDemo {
 
 	public static void main(String[] args) {
 		
-		Runtime runtime = Runtime.getRuntime();
-		
-		System.out.println("maxMemory : " + runtime.maxMemory());
-		System.out.println("totalMemory : " + runtime.totalMemory());
-		System.out.println("freeMemory : " + runtime.freeMemory());
-		runtime.gc();
-		
+		System.out.println("maxMemory : " + Runtime.getRuntime().maxMemory());
+		System.out.println("totalMemory : " + Runtime.getRuntime().totalMemory());
+		System.out.println("freeMemory : " + Runtime.getRuntime().freeMemory());
+		System.out.println("NumberOfAvailableProcessors : " + Runtime.getRuntime().availableProcessors());
+		Runtime.getRuntime().gc();
 		
 	}
 }
