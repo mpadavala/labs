@@ -20,14 +20,13 @@ public class CallableTest {
 		ExecutorService executor = Executors.newFixedThreadPool(10);
 		
 	    Collection<Callable<String>>callables = new HashSet<Callable<String>>();
-	    callables.add(new TaskOne());
-	    callables.add(new TaskTwo());
+	    callables.add(new CallableTaskOne());
+	    callables.add(new CallableTaskTwo());
 	    
-	    List<Future<String>> futures;
 		try {
 			StopWatch stopWatch = new StopWatch();
 			stopWatch.start();
-			futures = executor.invokeAll(callables);
+			List<Future<String>> futures = executor.invokeAll(callables);
 			
 			for(Future<String>future : futures) {
 				System.out.println(future.get());
