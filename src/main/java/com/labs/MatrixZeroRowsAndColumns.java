@@ -6,13 +6,13 @@ import java.util.Random;
  * Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column is set to 0.
  *
  */
-public class MatrixUtil {
+public class MatrixZeroRowsAndColumns {
 	
 	public static void main(String args[]){
-		makeRowsZero(10,5,1);
+		makeRowsAndColumnsZero(10,5,1);
 	}
 	
-	public static void makeRowsZero(int numRows, int numColumns, int numZeros){
+	public static void makeRowsAndColumnsZero(int numRows, int numColumns, int numZeros){
 		
 		int[][] matrix = populateMatrix(numRows, numColumns);
 		printMatrix(matrix);
