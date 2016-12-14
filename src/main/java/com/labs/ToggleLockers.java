@@ -10,7 +10,7 @@ public class ToggleLockers {
 	
 	public static void main(String[] args) {
 		
-		int[] locker = new int[50];
+		int[] locker = new int[100];
 		
 		for(int i=0; i<locker.length; i++){
 			locker[i]=0;
