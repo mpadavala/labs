@@ -2,24 +2,24 @@ package com.labs;
 
 public class ToggleLockers {
 	
-	private static int[] locker = new int[50];
-	
-	static{
+	public static void main(String[] args) {
+		
+		int[] locker = new int[50];
+		
 		for(int i=0; i<locker.length; i++){
 			locker[i]=0;
 		}
-		printArray(0);
-	}
-	
-	public static void main(String[] args) {
+		
+		ToggleLockers toggleLockers = new ToggleLockers();
+		toggleLockers.printArray(locker, 0);
 		
 		for(int i=0; i<locker.length; i++){
-			unlock(i+1);
-			printArray(i+1);
-		}
+			toggleLockers.unlock(locker,i+1);
+			toggleLockers.printArray(locker, i+1);
+		}	
 	}
 	
-	public static void unlock(int counter){
+	public void unlock(int[] locker, int counter){
 		int position=counter;
 		while(position<=locker.length){
 			if(locker[position-1]==0){
@@ -31,7 +31,7 @@ public class ToggleLockers {
 		}
 	}
 	
-	public static void printArray(int counter){
+	public  void printArray(int[] locker, int counter){
 		int numOpen=0;
 		System.out.print(counter + " : ");
 		for(int i=0; i<locker.length; i++){
