@@ -1,0 +1,74 @@
+https://gist.github.com/dm4/949529
+---------------------------------
+The default branch name in Git is master. As you start making commits, you’re given a master branch that points to the last commit you made. Every time you commit, it moves forward automatically.
+The “master” branch in Git is not a special branch. It is exactly like any other branch. The only reason nearly every repository has one is that the git init command creates it by default and most people don’t bother to change it.
+
+
+"git branch" should show all the local branches of your repo. The starred branch is your current branch.
+
+------
+What is HEAD
+
+You can think of the HEAD as the "current branch". When you switch branches with git checkout, the HEAD revision changes to point to the tip of the new branch.
+
+You can see what HEAD points to by doing:
+
+cat .git/HEAD
+----
+
+git log
+
+# to show the last 2 commits (minus for latest commits)
+git log -2
+
+# to show the full commit details use '-p' option
+git log -p
+
+# to show the full commit details  and limit the number of commits
+git log -p -2
+
+# to see the some abbreviated stats for each commit
+git log --stat
+
+#to see the commit messages in one line per commit
+git log --pretty=oneline
+
+#tagging
+git tag
+git show v1.0
+
+#creating an annotated tag
+git tag -a v1.1
+
+#creating an annotated tag with a particular hash (SHA-1)
+git tag -a v1.1.1 2gced03
+
+# pushing tags to remote
+git push origin v1.1
+
+# pusing all the tags to remote
+git push origin --tags
+
+
+Checking out Tags
+You can’t really check out a tag in Git, since they can’t be moved around. If you want to put a version of your repository in your working directory that looks like a specific tag, you can create a new branch at a specific tag with git checkout -b [branchname] [tagname]:
+
+$ git checkout -b version2 v2.0.0
+Switched to a new branch 'version2'
+Of course if you do this and do a commit, your version2 branch will be slightly different than your v2.0.0 tag since it will move forward with your new changes, so do be careful.
+
+
+
+# How to undo last Commit
+git reset --soft HEAD^     # use --soft if you want to keep your changes
+
+git reset --hard HEAD^     # use --hard if you don't care about keeping the changes you made
+
+
+------
+Stashing and Cleaning
+if your working directory or staging area has uncommitted changes that conflict with the branch you’re checking out, Git won’t let you switch branches. It’s best to have a clean working state when you switch branches. There are ways to get around this (namely, stashing and commit amending) that we’ll cover later on, in Stashing and Cleaning
+--------
+
+
+

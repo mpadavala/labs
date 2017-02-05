@@ -1,0 +1,20 @@
+#http://stackoverflow.com/questions/158044/how-to-use-find-to-search-for-files-created-on-a-specific-date
+# find files that are created on a specific date
+find ./ -type f -ls |grep '10 Sep'
+
+# number of cpus 
+nproc
+lscpu
+/proc/cpuinfo
+# memory on hosts 
+/proc/meminfo and free -m
+
+# for file in *.tar.gz; do tar -zxf $file; done
+
+# To Do grep recursively
+grep -r "texthere" .
+grep -r --include "*.txt" texthere .
+grep -r --exclude "*.txt" texthere .
+grep -i --color 'unix\|bash' test
+
+ 
