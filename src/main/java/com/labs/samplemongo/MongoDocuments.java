@@ -10,7 +10,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 
 public class MongoDocuments {
-
+/*
 	private static final String MONGOS_HOSTNAME = "localhost";
 	private static final int MONGOS_PORT = 40000;
 	private static final String MONGO_DB_NAME = "testmongodb";
@@ -40,5 +40,6 @@ public class MongoDocuments {
 		}
 
 	}
+	*/
 	
 }
