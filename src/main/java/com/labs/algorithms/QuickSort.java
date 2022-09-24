@@ -1,47 +1,40 @@
 package com.labs.algorithms;
 
-import java.util.Arrays;
-
 public class QuickSort {
 
-	public static void quickSort(int[] array) {
+	public void sort(int[] array) {
+		System.out.println("Number of Elements : " +  array.length);
 		doQuickSort(array, 0, array.length - 1);
 	}
 	
-	public static void doQuickSort(int[] array, int startIndex, int endIndex) {
+	private void doQuickSort(int[] array, int low, int high) {
 		
-		int pivot = pivot(array, startIndex, endIndex);
-		
-		if (startIndex < pivot - 1) {
-			doQuickSort(array, startIndex, pivot - 1);
-		}
-		if (endIndex > pivot) {
-			doQuickSort(array, pivot, endIndex);
+		if(low < high) {
+			int pivot = partition(array, low, high);
+			doQuickSort(array, low, pivot-1);
+			doQuickSort(array, pivot+1, high);
 		}
 	}
 
-	public static int pivot(int[] array, int left, int right) {
+	private int partition(int[] array, int begin, int end) {
 		
-		int tempIndex = (right-left)/2;
-		
-		if(tempIndex > left && tempIndex <right){
-			
-		}
-		
-		
-		System.out.println("pivot : " + left);
-		return left;
-	}
+		int pivotElement = array[end];
+	    int i = (begin-1);
 
-	public static void main(String args[]) {
-		int[] input = { 23, 31, 1, 21, 36, 72 };
-		System.out.println("Before sorting : " + Arrays.toString(input));
-		quickSort(input); 
-		System.out.println("After sorting : " + Arrays.toString(input)); 
+	    for (int j = begin; j <= end-1; j++) {
+	        if (array[j] < pivotElement) {
+	            i++;
+	            swap(array, i, j);
+	        }
+	    }
+	    swap(array, i+1, end);
+	    return (i+1);	
+	}
+	
+	private void swap(int[] array, int i, int j) {
 		
-		int[] withDuplicates = { 11, 14, 16, 12, 11, 15 };
-		System.out.println("Before sorting : " + Arrays.toString(withDuplicates));
-		quickSort(withDuplicates); 
-		System.out.println("After sorting : " + Arrays.toString(withDuplicates));
+		int temp = array[i];
+		array[i] = array[j];
+		array[j] = temp;
 	}
 }
