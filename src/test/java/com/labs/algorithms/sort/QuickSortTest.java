@@ -1,8 +1,10 @@
-package com.labs.algorithms;
+package com.labs.algorithms.sort;
 
 import java.util.Arrays;
 
 import org.junit.Test;
+
+import com.labs.algorithms.sort.QuickSort;
 
 public class QuickSortTest {
 	
