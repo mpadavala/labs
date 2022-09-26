@@ -1,6 +1,6 @@
 package com.labs.algorithms.linkedlist;
 
-public interface MyLinkedList {
+public interface LinkedList {
 
 	public void add(int value);
 	

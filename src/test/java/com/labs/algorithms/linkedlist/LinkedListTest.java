@@ -1,10 +1,15 @@
 package com.labs.algorithms.linkedlist;
 
-public class MyLinkedListDemo {
+import org.junit.Test;
+
+public class LinkedListTest {
 	
-	public static void main(String[] args) {
+	@Test 
+	
+	public void linkedListTest() {
 		
-		MyLinkedList linkedList = new MyLinkedListImpl();
+		LinkedList linkedList = new LinkedListImpl2();
+		
 		System.out.println("adding 1");
 		linkedList.add(1);
 		System.out.println("adding 2");
