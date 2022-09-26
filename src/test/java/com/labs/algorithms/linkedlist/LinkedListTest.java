@@ -8,7 +8,7 @@ public class LinkedListTest {
 	
 	public void linkedListTest() {
 		
-		LinkedList linkedList = new LinkedListImpl2();
+		LinkedList linkedList = new LinkedListImpl();
 		
 		System.out.println("adding 1");
 		linkedList.add(1);
