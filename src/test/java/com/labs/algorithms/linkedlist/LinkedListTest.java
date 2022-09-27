@@ -18,6 +18,10 @@ public class LinkedListTest {
 		linkedList.add(30);
 		System.out.println("adding 4");
 		linkedList.add(4);
+		System.out.println("adding 2");
+		linkedList.add(2);
+		System.out.println("adding 1");
+		linkedList.add(1);
 		
 		System.out.println("Printing the elements in the LinkedList");
 		linkedList.print();

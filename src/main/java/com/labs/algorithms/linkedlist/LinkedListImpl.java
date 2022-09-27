@@ -108,4 +108,24 @@ public class LinkedListImpl implements LinkedList{
 		
 	}
 	
+	@Override
+	public void removeDuplicates() {
+		
+		if(size <=1) return;
+		Node data = head;
+		Node temp = head.getNext();
+
+		while(temp != null) {
+			if(temp.value == data.value) {
+				//remove the node	
+				if(temp.next == null) {
+					
+				}
+				
+			}
+			temp = temp.getNext();
+		}
+		
+	}
+	
 }

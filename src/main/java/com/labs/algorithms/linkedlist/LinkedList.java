@@ -20,4 +20,6 @@ public interface LinkedList {
 	
 	public int getByIndex(int index);
 	
+	public void removeDuplicates();
+	
 }
